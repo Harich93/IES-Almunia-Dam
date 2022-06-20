@@ -1,0 +1,37 @@
+<div class="frame">
+
+
+     <!-- Categorias -->
+    <div class="categorias">
+        <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle (click)="filtrar('all')" value="vehiculo">Todos</mat-button-toggle>
+            <mat-button-toggle (click)="filtrar('vehiculo')" value="vehiculo">Vehículos</mat-button-toggle>
+            <mat-button-toggle (click)="filtrar('hogar')" value="hogar">Hogar</mat-button-toggle>
+            <mat-button-toggle (click)="filtrar('electronica')" value="electronica">Electrónica</mat-button-toggle>
+          </mat-button-toggle-group>
+    </div>
+
+
+      <!-- Tipo de vista -->
+    <div class="frame-articulos" [ngClass]="{ 'lista': lista}">
+        <div class="vista">
+            <mat-button-toggle-group appearance="legacy" name="fontStyle" aria-label="Font Style">
+                <mat-button-toggle class="btn-view-primary" aria-selected="true" (click)="lista = false">
+                    <i  class="fas fa-grip-horizontal"></i>
+                </mat-button-toggle>
+
+                <mat-button-toggle class="btn-view-primary"  (click)="lista = true">
+                    <i  class="fas fa-th-list"></i>
+                </mat-button-toggle>
+            </mat-button-toggle-group>
+            
+        </div>
+
+        <!-- Articulos -->
+        <app-articulo *ngFor="let articulo of articulos"
+            [articulo]="articulo"
+            [lista]="lista" >
+        </app-articulo>
+
+    </div>
+</div>

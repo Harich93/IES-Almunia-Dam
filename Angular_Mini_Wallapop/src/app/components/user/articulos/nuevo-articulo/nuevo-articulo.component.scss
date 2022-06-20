@@ -1,0 +1,61 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/buttons.scss';
+
+form{
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 90%;
+    padding: 50px;
+    padding-top: 0px;
+    
+    h2 { text-align: start}
+}
+
+.form-data{
+    display: flex;
+    flex-direction: column;
+
+    textarea {
+        background-color: $dark-trans;
+        border: none;
+        color: white;
+        font-size: large;
+        height: 100px;
+        margin-bottom: 10px;
+        outline: none;
+        resize: none;
+    }
+
+}
+
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 0.01px white;
+    color: white;
+    font-size: large;
+    margin-bottom: 30px;
+    outline: none;
+    
+    &.error{ color: $warn }
+
+    &[type=number] {
+        box-decoration-break: none;
+    }
+}
+    
+    
+
+
+.file {
+    text-align: end;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+    span{ margin-left: 10px; }
+    &:hover {color: darken($color: white, $amount: 50);}
+}
+.file-input{ display: none }

@@ -1,0 +1,45 @@
+<div class="container">
+    <div class="login" [ngClass]="{'dark': style.oscuro}">
+        <h1> Login </h1>
+        <form [formGroup]="formLogin" (submit)="loging()"> 
+
+            <div class="email">
+                <span
+                class="error"
+                *ngIf="usuario.invalid && usuario.touched"
+                > Usuario requerido </span>
+
+                <input
+                    [ngClass]="{'dark': style.oscuro }"
+                    formControlName="usuario"
+                    type="text"
+                    autocomplete="off"
+                    placeholder="Email o usuario"     
+                >
+            </div>
+            
+            
+            
+            <div class="pass">
+                <span
+                class="error"
+                *ngIf="pass.invalid && pass.touched"
+                > Debe tener 8 caracteres como minimo </span>
+
+                <input 
+                    [ngClass]="{'dark': style.oscuro }"
+                    formControlName="pass"
+                    type="password"
+                    autocomplete="off"
+                    placeholder="Pass..."   
+                >
+            </div>
+            
+            <button 
+                type="submit" 
+                [disabled]="pass.invalid || usuario.invalid" 
+            
+            > Login </button>
+        </form>
+    </div>
+</div>

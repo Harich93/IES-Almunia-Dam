@@ -1,0 +1,32 @@
+<div class="cabecera">
+
+    <ng-content
+        select="img"
+    ></ng-content>
+
+    <h1> Cabecera Personalizada </h1>
+
+    <ul>
+        <li> 
+            <button
+                class="btn"
+                (click)="cambiarImagenVC()"
+            > Cambiar VC </button> 
+        </li>
+                    
+        <li>
+            <button
+            class="btn"
+            (click)="ocultarImagen()"
+            > {{ oculta ? "Mostrar" : "Ocultar"}}</button> 
+        </li>
+
+        <li> 
+            <button 
+                class="btn"
+                (click)="cambiarImagen()"
+            > Cambiar </button> 
+        </li>
+    </ul>
+    
+</div>

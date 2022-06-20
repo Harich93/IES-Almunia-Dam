@@ -1,0 +1,51 @@
+
+<ion-header>
+  <ion-toolbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid >
+    <ion-col class="col-form">
+
+      <!-- Form -->
+      <div class="form-container">
+        <h3>Login</h3>
+        
+        <form [formGroup]="formLogin" (submit)="login()" novalidate>
+          
+          <ion-col>
+            <ion-label position="stacked">Email: *</ion-label>
+            <ion-row class="row-input">
+              <ion-input 
+                formControlName="email"
+                placeholder="example@gmail.com"
+              ></ion-input>
+            </ion-row>
+          </ion-col>
+    
+          <ion-col>
+            <ion-label position="stacked">Contraseña: *</ion-label>
+            <ion-row class="row-input">
+              <ion-input 
+                formControlName="pass"
+                type="password" 
+                placeholder="Contraseña..."
+              ></ion-input>
+            </ion-row>
+          </ion-col>
+  
+          <ion-row class="form-button" >
+            <ion-button type="submit"
+              [disabled]="!email.valid || !pass.valid"
+            >Login</ion-button>
+          </ion-row>
+        </form>
+      </div>
+      <!-- End form -->
+      
+        <label routerLink="/register">¿No tienes cuenta?</label>
+
+    </ion-col>
+</ion-grid>
+</ion-content>

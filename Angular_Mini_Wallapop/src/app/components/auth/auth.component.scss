@@ -1,0 +1,93 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/buttons.scss';
+
+.frame {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+form {
+    color: white;
+    background-color:$dark-trans;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    min-height: 350px;
+    min-width: 350px;
+
+    h2{ text-align: center }
+    
+    input{
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 0.01px white;
+        color: white;
+        font-size: large;
+        margin-bottom: 25px;
+        outline: none;
+        
+        &.error{ color: $warn }
+    }
+    
+    a{
+        color: white;
+        cursor: pointer;
+        font-size: small;
+        text-decoration: underline;
+
+        transition: color .4s ease-in-out;
+
+        &:hover{
+            color: darken($color: white, $amount: 40)
+        }
+
+    }
+
+    span{
+        color: $warn;
+        display: none;
+
+        &.error {
+            display: block;
+        }
+    }
+}
+
+.form-data{
+    display: flex;
+    flex-direction: row;
+    
+
+    .datos-personales, .datos-auth{
+        color: $primary;
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+    
+}
+
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+  }
+
+@media (max-width: 550px) {
+    
+    form {
+        padding: 10px;
+        margin: 20px; 
+        min-height: 300px;
+        min-width: 320px;
+    }
+
+    .form-data{ flex-direction: column }
+    
+}
+

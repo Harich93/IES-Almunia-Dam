@@ -1,0 +1,43 @@
+<div class="frame">
+
+    <form [formGroup]="formDatosPersonales">
+        
+        <h1>Datos personales</h1>
+        
+        <span>Nombre:</span>
+        <input 
+        [ngClass]="{ 'error': nombre.invalid && nombre.touched, 'success': nombre.valid && nombre.touched }" 
+        formControlName="nombre"
+        placeholder="Nombre..."
+        >
+        
+        <div class="direccion">
+            <div class="input mr">
+                <span>Ciudad:</span>
+                <input 
+                [ngClass]="{ 'error': direccion.invalid && direccion.touched, 'success': direccion.valid && direccion.touched }" 
+                formControlName="ciudad" 
+                placeholder="Ciudad..."
+                >
+            </div>
+
+            <div class="input ml">
+                <span>Calle, Avd, Plaza, Urbanización:</span>
+                <input 
+                [ngClass]="{ 'error': direccion.invalid && direccion.touched, 'success': direccion.valid && direccion.touched }" 
+                formControlName="direccion" 
+                placeholder="Direccion..."
+                >
+            </div>
+        </div>
+        
+        <button (click)="actualizarDatos()" class="btn primary btn-menu">Actualizar datos</button>
+        
+    </form>
+
+    <div class="ubicacion">
+        <h1>Mi ubicación</h1>
+        <app-google-map></app-google-map>
+    </div>
+    
+</div>

@@ -1,0 +1,44 @@
+@import '/src/styles.scss';
+
+.chiste-container {
+    display: flex;
+    flex-direction: column;
+
+    h2, span{
+        color: rgb(95, 95, 95);
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    h2 { 
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+
+    span { font-size: 20px }
+
+    button {
+        background-color: $orange;
+        width: 150px;
+
+        &:hover{
+            background-color: transparent;
+            border: solid 0.1px $orange;
+            color: $orange;
+            cursor: pointer;
+        }
+
+
+        
+    }
+    .eliminar{
+        background-color: rgb(226, 81, 81);
+        
+        &:hover{
+            background-color: transparent;
+            border: solid 0.1px rgb(226, 81, 81);
+            color: rgb(226, 81, 81);
+            cursor: pointer;
+        }
+    }
+
+}

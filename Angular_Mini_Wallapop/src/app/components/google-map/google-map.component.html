@@ -1,0 +1,10 @@
+<div class="map" [ngClass]="{ 'articulo': vistaArticulo }">
+    <iframe
+        [width]="width"
+        [height]="height"
+        style="border:0"
+        loading="lazy"
+        allowfullscreen
+        [src]="src | safe">
+  </iframe>
+</div>

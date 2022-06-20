@@ -1,0 +1,22 @@
+.frame{ 
+    display: flex;
+    flex-direction: row;
+    height: 100% 
+}
+
+.nuevo-articulo {
+    flex: 4;
+}
+
+.mis-articulos {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    flex: 2;
+    padding: 50px;
+}
+
+@media (max-width: 1000px) {
+    .frame{ flex-direction: column; }
+
+}

@@ -1,0 +1,94 @@
+
+.container {
+    align-items: center;
+    background-color: teal;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100%;
+
+}
+
+.login { 
+    background-color: white;
+    box-shadow: 2px 2px 10px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+    
+    h1{
+        text-align: center;
+        color: darken($color: grey, $amount: 10);
+    }
+}
+
+
+
+form {
+
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+
+    input{
+        background-color: transparent;
+        border: none;
+        border-bottom: solid 0.01px black;
+        font-size: larger;
+        outline: none;
+    
+    }
+
+    button {
+        margin-top: 10%;
+        background-color: teal;
+        border: transparent;
+        border-radius: 4px;
+        color: white;
+        cursor: pointer;
+        height: 40px;
+        font-weight: bold;
+
+        transition: all .4s ease-in-out;
+
+        &:hover {
+            background-color: transparent;
+            border: 0.1px solid teal;
+            color: teal;
+        }
+
+        &:disabled {
+            background-color: rosybrown;
+            &:hover {
+                color: white;
+                border: solid rosybrown
+            }
+        }
+    }
+
+}
+
+.email, .pass {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.email {
+    margin-top: 10px;
+}
+
+.pass {
+    margin-top: 30px;
+}
+
+.dark{
+    color: white;
+    background-color: rgb(34, 34, 34);
+}
+
+.error {
+    color: red;
+}

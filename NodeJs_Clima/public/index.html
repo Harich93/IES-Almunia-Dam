@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="style.css">
+   <script src="./script.js"></script>
+   
+   <title>El tiempo</title>
+</head>
+<body>
+
+   <!-- Tabs -->
+   <h1>Clima</h1>
+   <ul>
+      <li> <span id="tabSearch">Búsqueda</span> </li>
+      <li> <span id="tabRecord">Historial</span> </li>
+   </ul>
+   <hr/>
+
+
+   <div id="search-frame">
+      
+      <!-- Formulario busqueda -->
+      <div id="search-container" class="container"> 
+         <div class="search col">
+            <h3>Buscar</h3>
+            
+            <input 
+               id="cityIn"
+               type="text"
+               autocomplete="off"
+               placeholder="Nombre ciudad..."
+               autocapitalize="on"
+            />
+   
+            <span id="sError" class="error hidden">Debe tener mínimo 3 cáracteres</span>
+   
+            <p><button id="btnSearch">Buscar</button></p>
+   
+         </div>
+         
+         <!-- Contenedor resultado -->
+         <div id="res-container" class="res col-1"></div>
+      
+      </div>
+
+   </div>
+
+
+   <div id="record-frame">
+
+      <div id="record-container" class="container p-0"></div>
+
+   </div>
+
+</body>
+</html>

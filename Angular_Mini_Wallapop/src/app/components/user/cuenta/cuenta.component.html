@@ -1,0 +1,22 @@
+<div class="frame">
+
+    <!-- Sidebar -->
+    <div class="datos"> 
+        <div class="datos-personales">
+            <i class="fas fa-user-cog"></i>
+            <span>Nombre: {{ name }}</span>
+            <span>Email: {{ email }}</span>
+        </div>
+        <div class="menu">
+            <button routerLink="/user/count" class="btn dark btn-menu"> Datos personales </button>
+            <button routerLink="/user/count/articles" class="btn dark btn-menu"> Mis articulos </button>
+        </div>
+    </div>
+    
+    <!-- Componentes  -->
+    <div class="confi">
+        <router-outlet></router-outlet>
+    </div>
+
+
+</div>

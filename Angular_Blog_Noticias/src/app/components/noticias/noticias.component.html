@@ -1,0 +1,8 @@
+<app-formulario></app-formulario>
+
+<div class="container">
+    <app-noticia 
+        *ngFor="let noticia of (noticias$ | async)"
+        [noticia]="noticia"
+    ></app-noticia>
+</div>

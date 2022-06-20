@@ -1,0 +1,13 @@
+/* You can add global styles to this file, and also import other style files */
+// Colors 
+
+$primary: #bcd979 ;
+$secondary: #7d6d61;
+$dark: #191516;  
+
+html, body {
+    background-color: $dark;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}

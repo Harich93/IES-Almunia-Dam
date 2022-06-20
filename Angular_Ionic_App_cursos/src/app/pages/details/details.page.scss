@@ -1,0 +1,36 @@
+.grid-details{
+   padding: 50px;
+   height: 100%;
+
+   form {
+      margin-top: 20px;
+
+      ion-row {
+         display: flex;
+         justify-content: center;
+         width: 100%;
+
+         span {
+            margin-top: 10px;
+         }
+      }
+   }
+}
+
+.btn-mod {
+   margin: 10px 50px 0 0;
+}
+
+.modal-camera {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-evenly;
+   height: 40%;
+   padding: 20px;
+
+   .buttons {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+   }
+}

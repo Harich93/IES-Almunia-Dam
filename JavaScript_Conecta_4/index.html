@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/modelo.js"></script>
+    <script src="js/controlador.js"></script>
+    <title>Conecta 4</title>
+</head>
+<body>
+    <div id="divForm">
+        <div id="headForm"><h3>Participantes</h3></div>
+        <div id="contentForm">
+            <p>Jugador 1:<input type="radio" id="c1" name="color1" value="rojo">Rojo<input type="radio" name="color1" value="azul">Azul
+                <br><input type="text" class="text" id="txtJugador1" placeholder="Escriba nombre del jugador 1" required /></p>
+            <p>Jugador 2: <input type="radio" id="c2" name="color2" value="amarillo">Amarillo<input type="radio" name="color2" value="verde">Verde
+                <br><input type="text" class="text" id="txtJugador2" placeholder="Escriba nombre del jugador 2" required /></p>
+            <p><input type="button" value="Aceptar" id="btnFormulario"></p>
+        </div>
+    </div>
+    <div id="cabecera">
+        <div id="jugadores"></div>
+        <div id="turno"></div>
+        <div id="controlPartida">
+            <input type="button" value="Reiniciar" id="btnReiniciar" class="btnOculto">
+            <input type="button" value="Reiniciar mismos Jugadores" id="btnReiniciarMJ" class="btnOculto">
+        </div>
+    </div>
+
+    <div id="divTabla">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+@import '/src/scss/colors.scss';
+
+.btn {
+    color: white;
+    border: solid 0.1px transparent;
+    border-radius: 5px;
+    min-height: 30px;
+    min-width: 100px;
+
+    transition: all .4s ease-in;
+
+    &:hover{
+        cursor: pointer;
+
+    }
+}
+
+.primary{
+    background-color: $primary;
+    border-color: $primary;
+
+    &:hover{
+        color: $primary;
+        background-color: transparent;
+    }
+}
+
+.primary-trans{
+    color: $primary;
+    background-color: transparent;
+    border-color: $primary;
+
+    &:hover{
+        color: white;
+        background-color: $primary;
+    }
+}
+
+.accent{
+    background-color: $accent;
+    border-color: $accent;
+
+    &:hover{
+        color: $accent;
+        background-color: transparent;
+    }
+}
+
+.dark{
+    background-color: $dark-trans;
+    border-color: $dark-trans;
+
+    &:hover{
+        color: $primary;
+        background-color: transparent;
+    }
+}
+
+.btn-menu{
+    border-radius: 0;
+    padding: 5px;
+}
+
+.btn-view-primary {
+    
+    background-color: transparent;
+    i {
+        cursor: pointer;
+        color: white;
+        font-size: large;
+        
+        transition: color .4s ease-in;
+        
+        &:hover{ 
+            color: $primary;
+        }
+    }
+
+    &.mat-button-toggle-checked{ i{ color: $primary } }
+
+}
+
+
+.w100{
+    width: 100%;
+}
+
+.google-btn {
+    cursor: pointer;
+    margin: 10px 0 10px 0;
+    width: 100%;
+    height: 42px;
+    background-color: $dark-trans;
+    border-radius: 2px;
+    box-shadow: 0 3px 4px 0 $dark;
+
+    transition: all .4s ease-in-out;
+
+    .google-icon-wrapper {
+        position: absolute;
+        margin-top: 1px;
+        margin-left: 1px;
+        width: 40px;
+        height: 40px;
+        border-radius: 2px;
+        background-color: $white;
+    }
+    .google-icon {
+        position: absolute;
+        margin-top: 11px;
+        margin-left: 11px;
+        width: 18px;
+        height: 18px;
+    }
+    .btn-text {
+        margin: 11px 0 0 0;
+        color: $white;
+        font-size: 14px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        text-align: center;
+    }
+    &:hover {
+        background-color: transparent;
+        box-shadow: 0 0 6px $primary;
+    }
+    &:active {
+        background: $button-active-blue;
+    }
+}

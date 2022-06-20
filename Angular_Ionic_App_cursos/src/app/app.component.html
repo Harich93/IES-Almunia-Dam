@@ -1,0 +1,26 @@
+<ion-app>
+  
+
+  <ion-router-outlet></ion-router-outlet>
+
+
+  <!-- Tabs -->
+  <ion-tabs *ngIf="connectedUser">
+    
+    <ion-tab-bar slot="bottom">
+      
+      <ion-tab-button tab="list-courses">
+        <ion-icon name="list"></ion-icon>
+        <ion-label>Cursos</ion-label>
+      </ion-tab-button>
+      
+      <ion-tab-button tab="home">
+        <ion-icon name="home"></ion-icon>
+        <ion-label>Mis cursos</ion-label>
+      </ion-tab-button>
+
+    </ion-tab-bar>
+  </ion-tabs>
+  <!-- End tabs -->
+  
+</ion-app>

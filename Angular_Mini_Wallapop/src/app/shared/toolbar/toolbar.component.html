@@ -1,0 +1,15 @@
+<mat-toolbar color="primary" class="toolbar">
+
+    <button routerLink="" mat-button>
+        <i class="fab fa-shopify"></i>
+        Mini Wallapop
+    </button>
+    
+
+    <button mat-button [matMenuTriggerFor]="menu"><i class="fas fa-user-circle"></i></button>
+        <mat-menu color="primary" #menu="matMenu">
+            <button routerLink="/user/count" routerLinkActive="router-link-active"  mat-menu-item>Cuenta</button>
+            <button routerLink="/user/count/articles" mat-menu-item>Mis articulos</button>
+            <button (click)="cerrarSesion()" mat-menu-item>Cerrar sesión</button>
+        </mat-menu>
+</mat-toolbar>

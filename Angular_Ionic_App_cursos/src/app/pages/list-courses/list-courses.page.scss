@@ -1,0 +1,17 @@
+
+
+.item-buy{ 
+   background-color: transparent;
+   color: var(--ion-color-success);
+}
+
+.item-img {
+   border-radius: 100px;
+   overflow: hidden;
+   margin-right: 10px;
+   ion-img{
+      object-fit: cover;
+      height: 30px;
+      width: 30px;
+   }
+}

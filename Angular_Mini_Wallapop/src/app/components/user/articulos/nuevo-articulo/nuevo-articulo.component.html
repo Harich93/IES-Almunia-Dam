@@ -1,0 +1,62 @@
+    <form [formGroup]="formArticulo">
+      
+      <div class="header">
+        <h2> Publicar nuevo artículo </h2>
+        <div class="file" (click)="fileUpload.click()">
+          <i class="fas fa-cloud-upload-alt"></i>
+          <span>Subir imagen</span>
+        </div>
+      </div>
+      
+
+      <div class="form-data">
+        
+
+        <input type="file" class="file-input"
+          (change)="onFileSelected($event)" #fileUpload>
+        
+          <input
+              formControlName="nombre"
+              type="text"
+              placeholder="Nombre articulo..."
+              autocomplete="off"
+          >
+
+          <input
+              formControlName="precio"
+              type="number"
+              placeholder="Precio articulo..."
+              autocomplete="off"
+          >
+    
+          <textarea 
+            formControlName="descripcion"
+            type="text"
+            placeholder="Descripción del artículo..."
+            autocomplete="off"
+          >
+          </textarea>
+
+          <mat-form-field>
+            <mat-label>Estado del producto</mat-label>
+            <mat-select formControlName="estado">
+              <mat-option value="Como nuevo">Como nuevo</mat-option>
+              <mat-option value="Poco uso">Poco uso</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <mat-form-field>
+              <mat-label>Categoria</mat-label>
+              <mat-select formControlName="categoria">
+                <mat-option value="Electronica">Electronica</mat-option>
+                <mat-option value="Hogar">Hogar</mat-option>
+                <mat-option value="Vehiculo">Vehiculo</mat-option>
+              </mat-select>
+          </mat-form-field>
+
+
+        </div>
+        
+        <button class="btn dark" [disabled]="formArticulo.invalid" (click)="publicar()"> Publicar artículo </button>
+    
+    </form>   

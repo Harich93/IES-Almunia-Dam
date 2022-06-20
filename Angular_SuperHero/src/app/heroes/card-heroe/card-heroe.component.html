@@ -1,0 +1,19 @@
+<div class="card glass ">
+    
+    <div class="card-image" [hidden]="heroe.oculto">
+        <img  [src]="heroeImage"/>
+    </div>
+
+    <div class="card-desc">
+        <h3>{{ heroe.superhero }}</h3>
+        <p> <strong>Alter ego: </strong> {{ heroe.alter_ego }} </p>
+        <p> <strong>Characters: </strong> {{ heroe.characters }} </p>
+        <p> <strong>Publisher: </strong> {{ heroe.publisher }} </p>
+        <p> <strong>First appearence: </strong> {{ heroe.first_appearence }} </p>
+    </div>
+
+    <button 
+        class="glass"
+        (click)="heroe.changeVisibility()"
+    > {{ heroe.oculto ? "Mostrar" : "Ocultar" }} </button>
+</div>

@@ -1,0 +1,38 @@
+
+<form [formGroup]="formulario" (submit)="crearChiste()">
+
+    <span
+        class="error"
+        *ngIf="anecdota.invalid && probado"
+    > Debe tener 6 caracteres como minimo </span>
+    <input
+        [ngClass]=" { 
+            'error': anecdota.invalid && probado,
+            'success': !anecdota.invalid && probado
+        }"
+        formControlName="anecdota"
+        type="text"
+        placeholder="Chiste..."
+        autocomplete="off"
+    />
+
+
+    <span
+    class="error"
+    *ngIf="respuesta.invalid && probado"
+    > Debe tener 6 caracteres como minimo </span>
+    <input 
+        [ngClass]=" { 
+            'error': respuesta.invalid && probado,
+            'success': !respuesta.invalid && probado
+        }"
+        formControlName="respuesta"
+        type="text"
+        placeholder="Respuesta..."
+        autocomplete="off"
+    />
+    
+
+    <button type="submit"> Crear </button>
+
+</form>

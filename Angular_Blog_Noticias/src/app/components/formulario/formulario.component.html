@@ -1,0 +1,38 @@
+
+<div class="container" >
+
+    <h3> Nueva noticia </h3>
+
+    <form [formGroup]="formNoticia" [ngClass]="{'dark': style.oscuro }">
+
+        <div class="formulario-nota">
+
+            <input 
+                [ngClass]="{
+                    'dark': style.oscuro,
+                    'error': tieneError(titulo)
+                }"
+                formControlName="titulo"
+                type="text"
+                placeholder="Titulo"
+                autocomplete="off"
+            >
+        
+            <textarea
+                [ngClass]="{
+                    'dark': style.oscuro,
+                    'error': tieneError(texto)
+                }"
+                formControlName="texto"
+                type="text"
+                placeholder="Redactar noticia..."
+                autocomplete="off"
+            ></textarea>
+        </div>
+        <div class="formulario-boton">
+            <button type="button" (click)="crear()" [disabled]="titulo?.invalid || texto?.invalid"> Crear </button>
+        </div>
+    
+    
+    </form>
+</div>

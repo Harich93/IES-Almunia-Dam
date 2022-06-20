@@ -1,0 +1,116 @@
+
+
+.navbar {
+    position: fixed;
+    margin: 0;
+    background-color: #F7F7F2;
+    box-shadow: 0 0 10px black;
+    height: 50px;
+    width: 100%;
+
+    .link{
+      cursor: pointer;
+      text-decoration: none; 
+      margin: 15px 15px 0 0; 
+    }
+
+    
+}
+
+.navbar-group-items{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.navbar-item{
+  margin-top: 10px;
+  display: flex;
+
+  span{
+    margin: 5px 10px 0 0;
+  }
+}
+
+.dark {
+  color: white;
+  background-color: rgb(34, 34, 34);
+}
+
+.error {
+  color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//<--- Switch --->
+
+/* Formateamos el label que servirá de contenedor */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 24px;
+  }
+   
+  /* Ocultamos el checkbox html */
+  .switch input {
+    display:none;
+  }
+   
+  /* Formateamos la caja del interruptor sobre la cual se deslizará la perilla de control o slider */
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+   
+  /* Pintamos la perilla de control o slider usando el selector before */
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+   
+  /* Cambiamos el color de fondo cuando el checkbox esta activado */
+  input:checked + .slider {
+    background-color: teal;
+  }
+   
+  /* Deslizamos el slider a la derecha cuando el checkbox esta activado */ 
+  input:checked + .slider:before {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(216px);
+    transform: translateX(16px);
+  }
+   
+  /* Aplicamos efecto de bordes redondeados en slider y en el fondo del slider */
+  .slider.round {
+    border-radius: 34px;
+  }
+   
+  .slider.round:before {
+    border-radius: 50%;
+  }

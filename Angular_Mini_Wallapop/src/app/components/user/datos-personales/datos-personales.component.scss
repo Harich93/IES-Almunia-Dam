@@ -1,0 +1,107 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/buttons.scss';
+
+.frame { 
+    height: 100%; 
+    overflow-y: scroll;
+    &::-webkit-scrollbar-button {
+        display: none;
+    }
+
+    &::-webkit-scrollbar {
+        width: 4px;     
+        height: 4px;  
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: lighten($color: grey, $amount: 30);
+        border-radius: 3px;
+    }
+}
+
+h1{
+    text-align: end;
+    color: white;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: xx-large;
+}
+
+form{
+    color: white;
+    display: flex;
+    flex: 3;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 100px;
+    
+    .direccion {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        .input {
+            display: flex;
+            flex: 1;
+            flex-direction: column;
+        }
+
+        .mr{ margin-right: 10px;}
+
+        .ml{ margin-left: 10px;}
+    }
+}
+
+span{ color: $primary }
+
+input{
+    background-color: transparent;
+    border: none;
+    border-bottom: solid 0.01px white;
+    color: white;
+    font-size: large;
+    margin-bottom: 30px;
+    outline: none;
+    
+    &.error { color: $warn }
+    
+    &.success { color: $success }
+}
+
+.ubicacion{
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px 0 100px;
+    justify-content: space-around;
+    flex: 1;
+}
+
+@media (max-width: 1000px) {
+    .frame{ flex-direction: column; }
+
+    h1{
+        text-align: start;
+        color: white;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: large;
+    }
+    form{
+        padding: 10px;
+        margin-bottom: 20px;
+        .direccion { 
+            flex-direction: column;
+        
+            .input {
+                display: flex;
+                flex: 1;
+                flex-direction: column;
+            }
+
+            
+            .mr{ margin-right: 0px;}
+
+            .ml{ margin-left: 0px;}
+        }
+    }
+
+    .ubicacion{ padding: 0; align-items: center; }
+}

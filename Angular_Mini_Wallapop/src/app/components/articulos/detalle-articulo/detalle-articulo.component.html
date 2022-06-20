@@ -1,0 +1,38 @@
+<div class="frame">
+
+    <div class="articulo">
+        
+        <!-- Imagen articulo -->
+        <div class="img" >
+            <img [src]="articulo.img" alt="">
+        </div>
+
+        <div class="descripcion">
+
+            <!-- Precio, nombre -->
+            <div class="header">
+                <h1>{{ articulo.nombre }} </h1>
+                <h1>{{ articulo.precio | currency: 'EUR' }}</h1>
+            </div>
+            <!-- Chips categorias -->
+            <div class="categorias">
+                <mat-chip-list aria-label="Fish selection">
+                    <mat-chip>{{ articulo.categoria }}</mat-chip>
+                </mat-chip-list>
+                <hr /> 
+                <span> <label>Estado: </label>{{ articulo.estado }} </span>
+            </div>
+
+            <!-- Descripción y estado -->
+            <blockquote> {{ articulo.descripcion }} </blockquote>
+            <!-- <button class="btn primary-trans">Comprar</button> -->
+            <app-paypal [articulo]="articulo"></app-paypal>
+        </div>
+        
+    </div>
+    
+    <!-- Google maps -->
+    <div class="map">
+        <app-google-map [uid]="id"></app-google-map>
+    </div>
+</div>

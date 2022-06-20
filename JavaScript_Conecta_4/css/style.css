@@ -1,0 +1,193 @@
+body {
+    background-image: url(../img/fondo.jpg);
+    background-repeat: no-repeat;
+}
+
+.divTurnos{
+    background-color: rgba(150, 150, 150, 0.774);
+    padding: 10px;
+    width: 99.8%;
+    height: 90px;
+    margin-top: -17px;
+    margin-left: -8px;
+    box-shadow: 0px 5px 15px black;
+    color: white;
+    text-align: center;
+    background: linear-gradient(to right, rgb(59, 55, 59), rgb(133, 131, 129))
+}
+
+#jugadores {
+    float: left;
+    margin-left: 20px;
+}
+
+#turno {
+    float: left;
+
+    width: 600px;
+    margin-left: 25%;
+    margin-top: 25px;
+    font-size: xx-large;
+    text-align: center;
+}
+
+#controlPartida {
+    float: right;
+    
+}
+
+.btnOculto {
+    display: none;
+}
+
+.btn {
+    margin-right: 5%;
+    margin-top: 5px;
+    border: thin;
+    border-radius: 5px;
+    padding: 10px;
+    background-color:  rgba(39, 190, 183, 0.904) ;
+    cursor: pointer;
+    float: right;
+}
+.btn:hover {
+    border: solid;
+    border-color: rgb(250, 165, 68);
+    color: white;
+}
+
+.turno2 {
+    color: rgb(68, 229, 250);
+}
+td.turno2{
+    background-color: rgb(68, 229, 250);
+}
+
+.turno1 {
+    color: rgb(252, 61, 61);
+
+}
+td.turno1{
+    background-color: rgb(252, 61, 61)
+}
+
+.turno3 {
+    color: rgb(252, 249, 61);
+}
+td.turno3 {
+    background-color: rgb(252, 249, 61)
+}
+
+.turno4 {
+    color: rgb(106, 252, 61);
+}
+td.turno4 {
+    background-color: rgb(106, 252, 61);
+}
+
+
+.turnoGanador {
+    color: rgb(255, 255, 255);
+}
+
+p {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+}
+
+
+table{
+    border:ridge;
+    background-color: rgba(155, 57, 185, 0.459);
+    border-radius: 5px;
+    width: 700px;
+    height: 600px;
+    margin-left: 30%;
+    margin-top: 8%;
+    box-shadow: 0px 5px 15px black;
+    background: linear-gradient(to right, rgb(59, 55, 59), rgb(133, 131, 129))
+}
+
+td{
+    border:ridge;
+    text-align: center;
+    background-color: white;
+    border-radius: 100px;
+    width: 20px;
+}
+
+.tdPlayer1{
+    background-color: rgb(68, 229, 250);
+}
+
+
+.tdPlayer2 {
+    background-color:yellow;
+}
+
+
+
+#divForm {
+
+    text-align: center;
+    height: 300px;
+    width: 500px;
+    margin-left: 36%;
+    margin-top: 15%;
+    background-color: rgba(211, 211, 211, 0.486);
+    box-shadow: 0px 5px 15px black;
+
+}
+
+#headForm {
+    width: 100%;
+    height: 40px;
+    background-color: rgb(81, 168, 250);  
+}
+
+h3{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size:xx-large;
+    color: white;
+    display: flexbox;
+    margin-top: 100px;
+}
+
+#contentForm {
+    margin-top: 5%;
+    font-size: medium;
+    font-weight: 600;
+    text-align: left;
+    margin-left: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(77, 77, 77);
+}
+
+.text {
+    width: 80%;
+    padding: 4px;
+    border-radius: 5px;
+    border-color: rgb(81, 168, 250) ;
+    background-color: rgba(211, 211, 211, 0.24);
+    cursor: text;
+    margin-top: 10px;
+}
+
+#btnFormulario {
+    margin-left: 35%;
+    margin-top: 20px;
+    border: thin;
+    border-radius: 7px;
+    padding: 10px;
+    background-color:  rgb(81, 168, 250) ;
+    cursor: pointer;
+}
+
+#pasarTurno {
+   display: none;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    background: linear-gradient(to right, rgb(252, 255, 68), rgb(0, 138, 131));
+    cursor: pointer;
+}

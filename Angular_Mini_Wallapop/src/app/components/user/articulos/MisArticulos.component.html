@@ -1,0 +1,16 @@
+<div class="frame">
+
+    <div class="nuevo-articulo">
+       <app-nuevo-articulo></app-nuevo-articulo>
+    </div>
+
+    <div class="mis-articulos">
+        <h2>Mis articulos</h2>
+        <app-articulo 
+            *ngFor="let articulo of articulos"
+            [articulo]="articulo"
+            [listaSmall]="true"
+        ></app-articulo>
+    </div>
+
+</div>

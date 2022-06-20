@@ -1,0 +1,13 @@
+
+<h1> Crear Chiste </h1>
+
+
+<!-- Formulario agregar chiste -->
+<app-agregar-chistes></app-agregar-chistes>
+
+
+<!-- Listado de chistes -->
+<app-chiste 
+    *ngFor="let chiste of chistes" 
+    [chiste]="chiste"
+></app-chiste>

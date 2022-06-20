@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "531452706395",
+    "project_id": "apppreguntas-93c1c",
+    "storage_bucket": "apppreguntas-93c1c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:531452706395:android:3be2442a8ff3a7a9dcc97e",
+        "android_client_info": {
+          "package_name": "com.example.apppreguntas"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "531452706395-tmnt25hiq2cj56tbacm32qj5mpbmprme.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOyutBre_ce81thsBzSJ95Q6bwZV259L8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "531452706395-tmnt25hiq2cj56tbacm32qj5mpbmprme.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

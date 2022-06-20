@@ -1,0 +1,19 @@
+button{
+    background-color: $primary;
+    border: transparent;
+    border-radius: 10px;
+    color: white;
+    height: 40px;
+    margin: 5px;
+    
+    transition: all .5s ease-in-out;
+
+    &:hover{
+        background-color: transparent;
+        border: solid 0.1px $primary;
+        color: $primary;
+        cursor: pointer;
+    }
+        
+    
+}

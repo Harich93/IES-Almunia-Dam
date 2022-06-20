@@ -1,0 +1,13 @@
+<div class="navbar" [ngClass]="{'dark': style.oscuro }">
+    <ul class="navbar-group-items">
+        <span [routerLink]="'/login'" class="navbar-item link">Login</span>
+        
+        <div class="navbar-item">
+            <span>Light/Dark</span>
+            <label class="switch">
+                <input type="checkbox" (change)="cambiaEstilo()">
+                <div class="slider round"></div>
+            </label>
+        </div>
+    </ul>
+</div>

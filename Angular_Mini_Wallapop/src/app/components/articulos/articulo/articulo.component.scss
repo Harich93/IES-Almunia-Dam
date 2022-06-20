@@ -1,0 +1,124 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/buttons.scss';
+
+.card {
+    background-color: $dark-trans;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 300px;
+    margin: 5px;
+    overflow: hidden;
+    width: 250px;
+
+    transition: all .5s ease-in-out;
+    
+    &:hover {
+        box-shadow: 2px 2px 5px black;
+        transform: scale(100.01%);
+    }
+
+    .card-header {
+        padding: 5px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    h2, h3{ color: white;}
+
+
+    img { 
+        border-radius: 5px 5px 0 0;
+        height: 250px; 
+        width: 250px; 
+    }
+    
+
+    &.lista{
+        flex-direction: row;
+        height: 70px;
+        width: 60vw;
+        
+        .card-header {
+            flex: 1;
+            padding: 20px;
+        }
+
+        img {
+            border-radius: 5px 0 0 5px;
+            width: 80px;
+            height: 70px;
+        }
+    }
+
+    &.listaSmall{
+        flex-direction: row;
+        height: 70px;
+        width: 90%;
+        
+        .card-header {
+            flex: 1;
+            padding: 20px;
+        }
+
+        img {
+            border-radius: 5px 0 0 5px;
+            width: 80px;
+            height: 70px;
+        }
+    }
+
+    
+}
+
+@media (max-width: 500px) {
+    .card {
+        height: 180px;
+        margin: 5px;
+        width: 30vw;
+    
+        transition: all .5s ease-in-out;
+        
+        &:hover {
+            box-shadow: 2px 2px 5px black;
+            transform: scale(100.01%);
+        }
+    
+        .card-header {
+            flex-direction: column; 
+            padding: 0; 
+            margin: 0 10px 10px 10px 
+        }
+    
+        h2, h3{ 
+            color: white; 
+            font-size: small; 
+            margin: 0; 
+        }
+    
+    
+        img { 
+            border-radius: 5px 5px 0 0;
+            height: 120px; 
+            width: 30vw; 
+        }
+
+        &.lista{
+            
+            .card-header {
+               
+                padding: 5px;
+            }
+        }
+
+        &.listaSmall{
+            
+            .card-header {
+                flex: 1;
+                padding: 5px;
+            }
+
+        }
+    }
+}

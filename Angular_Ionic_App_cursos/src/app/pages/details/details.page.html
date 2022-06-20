@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{course.name}}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-grid class="grid-details">
+    <ion-col class="form-col">
+      <ion-img [src]="course.img  || 'http://estacionlafinca.com/img/producto_sin_imagen.jpg'"></ion-img>
+
+      <div>
+
+        <form [formGroup]="formModCourse" (submit)="modCourse()" novalidate>
+            
+          <ion-row>
+            <span>Curso:</span>
+              <ion-input 
+                formControlName="name"
+                placeholder="Nombre curso"
+              ></ion-input>
+          </ion-row>
+    
+          <ion-row>
+            <span>Precio:</span>
+              <ion-input 
+                formControlName="price"
+                type="number" 
+                placeholder="0.0"
+              ></ion-input>
+          </ion-row>
+  
+          <ion-col class="form-button" [hidden]="myCourse()" >
+
+            <ion-button type="submit" class="btn-mod"
+              [disabled]="!name.valid || !price.valid"
+            >
+              Modificar
+            </ion-button>
+            <!-- Button camera -->
+            <ion-fab>
+              <ion-fab-button (click)="isModalOpen = true">
+                <ion-icon name="camera"></ion-icon>
+              </ion-fab-button>
+            </ion-fab>
+            <!-- End button camera -->
+            
+          </ion-col>
+        </form>
+
+      </div>
+      <!-- End form -->
+      
+
+      
+         
+
+      <!-- Modal -->
+      <ion-modal
+      [isOpen]="isModalOpen"
+      [breakpoints]="[0.05, 0.3, 0.4]"
+      [initialBreakpoint]="0.4"
+      >
+      <ng-template>
+        <ion-content>
+          <div class="modal-camera">
+            <h4>Agregar imagen</h4>
+            <span>¿Desea acceder a la galería o usar la cámara?</span>
+            <div class="buttons">
+              <ion-button (click)="openGalery()">Galería</ion-button>
+              <ion-button (click)="takePhoto()">Cámara</ion-button>
+            </div>
+
+          </div>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    <!-- End modal -->
+    
+    </ion-col>
+  </ion-grid>
+
+</ion-content>

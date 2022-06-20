@@ -1,0 +1,8 @@
+<div class="chiste-container">
+    <h2> {{ chiste.anecdota | cleanText:['comida','focas'] }} </h2>
+    <span [hidden]="chiste.oculto"> {{ chiste.respuesta | cleanText }} </span>
+    <div>
+        <button (click)='mostrarOcultar()'> Mostrar/Ocultar </button>
+        <button class="eliminar" (click)='eliminar( chiste )'> Eliminar </button>
+    </div>
+</div>

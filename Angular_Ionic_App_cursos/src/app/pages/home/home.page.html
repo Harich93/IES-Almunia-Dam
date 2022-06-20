@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-title class="ion-text-center">Mis Cursos</ion-title> -->
+    <ion-buttons slot="end" (click)="logout()">
+      <ion-button><ion-icon name="log-out-outline"></ion-icon></ion-button>
+    </ion-buttons>
+     <ion-buttons slot="start" routerLink="/new-course">
+       <ion-button color="success"><ion-icon name="add-circle-outline"></ion-icon><pre> Subir curso</pre></ion-button>
+     </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-title>Comprados</ion-title>
+  <ion-list>
+    <ion-item-sliding 
+      *ngFor="let course of buyCourses"
+    >
+      <ion-item>
+        <div class="item-img">
+          <ion-img [src]="course.img || 'http://estacionlafinca.com/img/producto_sin_imagen.jpg'"></ion-img>
+        </div>
+        <ion-label>{{course.name}}</ion-label>
+        <ion-label>{{course.price | currency: 'EUR' }}</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option class="item-delete">
+          <ion-icon name="trash"></ion-icon> 
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+
+  <ion-title>Propios</ion-title>
+  <ion-list>
+    <ion-item-sliding 
+      *ngFor="let course of sellsCourses"
+    >
+      <ion-item (click)="details(course)">
+        <div class="item-img">
+          <ion-img [src]="course.img || 'http://estacionlafinca.com/img/producto_sin_imagen.jpg'"></ion-img>
+        </div>
+        <ion-label>{{course.name}}</ion-label>
+        <ion-label>{{course.price | currency: 'EUR' }}</ion-label>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </ion-item>
+      <ion-item-options side="start">
+        <ion-item-option class="item-delete">
+          <ion-icon name="trash"></ion-icon> 
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
+</ion-content>

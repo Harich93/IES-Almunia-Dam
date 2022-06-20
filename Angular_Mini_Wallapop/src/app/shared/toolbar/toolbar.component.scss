@@ -1,0 +1,19 @@
+@import '/src/scss/colors.scss';
+
+.toolbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    i{ font-size: x-large }
+
+    .mat-button{
+       transition: all .5s ease-in-out;
+        &:hover {
+            background-color: darken($color: $primary, $amount: 20);
+        }
+
+    }
+
+}
+

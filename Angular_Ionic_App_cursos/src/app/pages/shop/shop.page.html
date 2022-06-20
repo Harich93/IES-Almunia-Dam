@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Cesta</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/list-courses"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-col>
+    <ion-card  *ngFor="let course of shop">
+      <ion-item>
+        <ion-img [src]="course.img || 'http://estacionlafinca.com/img/producto_sin_imagen.jpg'"></ion-img>
+        <ion-col>
+          <ion-card-title>{{ course.name }}</ion-card-title>
+          <ion-label class="precio-card">{{ course.price | currency: 'EUR' }}</ion-label>
+        </ion-col>
+        <ion-button 
+          class="item-delete" 
+          color="danger" 
+          fill="outline" 
+          slot="end"
+          (click)="delete(course)"
+        >
+          <ion-icon name="trash"></ion-icon>
+        </ion-button>
+      </ion-item>
+    </ion-card>
+  </ion-col>
+
+  <ion-row>
+    <ion-button color="success" (click)="buy()">
+      <ion-icon name="card-outline"></ion-icon>
+      Comprar
+    </ion-button>
+  </ion-row>
+
+</ion-content>

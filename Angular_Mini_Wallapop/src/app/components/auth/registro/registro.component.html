@@ -1,0 +1,86 @@
+<div class="frame">
+
+    <form [formGroup]="formRegistro">
+    
+        <h2> Registro </h2>
+    
+        <div class="form-data">
+
+          <div class="datos-personales">
+            <h4>Personal</h4>
+            <input
+              [ngClass]="{
+                'error': name.invalid && name.touched 
+              }"
+              formControlName="name"
+              type="text"
+              placeholder="Nombre..."
+              autocomplete="off"
+            >
+  
+            <input 
+              [ngClass]="{ 
+                'error': ciudad.invalid && ciudad.touched, 
+                'success': ciudad.valid && ciudad.touched 
+              }" 
+              formControlName="ciudad" 
+              placeholder="Ciudad..."
+            >
+  
+            <input 
+              [ngClass]="{ 
+                'error': direccion.invalid && direccion.touched, 
+                'success': direccion.valid && direccion.touched }" 
+              formControlName="direccion" 
+              placeholder="Direccion..."
+            >
+          </div>
+
+          <div class="datos-auth">
+            <h4 class="end">Autenticación</h4>
+            <input
+              [ngClass]="{
+                'error': email.invalid && email.touched 
+              }"
+              formControlName="email"
+              type="text"
+              placeholder="Email..."
+              autocomplete="off"
+            >
+      
+            <input 
+              formControlName="password"
+              type="password"
+              placeholder="Contraseña..."
+              autocomplete="off"
+            >
+  
+            <input 
+              formControlName="password2"
+              type="password"
+              placeholder="Repite contraseña..."
+              autocomplete="off"
+            >
+          </div>
+  
+
+          
+        </div>
+        <span color="warn" [ngClass]="{ 'error': tieneError() }" >
+          {{ msg }}
+        </span>
+    
+        <button class="btn primary" (click)="registrar()"> Registrarse </button>
+        
+        <div class="google-btn" (click)="registrarGoogle()" >
+          <div class="google-icon-wrapper">
+              <img class="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
+          </div>
+          <p class="btn-text">
+              <b>Sign in with google</b>
+          </p>
+        </div>
+    
+        <a routerLink="/auth/login" > Iniciar sesión </a>
+    </form>   
+  </div>

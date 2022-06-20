@@ -1,0 +1,33 @@
+@import '/src/scss/colors.scss';
+@import '/src/scss/buttons.scss';
+
+.frame-articulos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+
+    .vista {
+        margin-bottom: 20px;
+        text-align: center;
+        width: 90%;
+    }
+}
+
+.categorias{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
+    mat-button-toggle:hover {
+        transition: all .3s ease-in;
+        background-color: lighten($color: $dark, $amount: 20);
+    }
+}
+
+.lista {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}

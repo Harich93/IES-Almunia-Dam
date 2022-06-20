@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">AppPreguntas</string>
+    <string name="ya_tienes_cuenta">¿Ya tienes cuenta?</string>
+    <string name="registrar">Registrar</string>
+    <string name="contrasena">Contraseña</string>
+    <string name="email">Email</string>
+    <string name="nombre">Nombre</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_test">Test</string>
+    <string name="menu_ajustes">Ajustes</string>
+    <string name="menu_nuevo">Nuevo</string>
+    <string name="lb_spinner_text">Selecciona categoria</string>
+    <string name="ajustes_title_test">¡Crea tu cuestionario!</string>
+    <string name="ajustes_title_mod_tets">Gestiona tus cuestionarios</string>
+    <string name="ajustes_mod_facil">Test Fácil</string>
+    <string name="ajustes_mod_test">Modificar</string>
+    <string name="ajustes_btn_add_">Agregar pregunta</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="crear">Crear</string>
+    <string name="spinner_text">Seleccione</string>
+    <string name="seleccione_categoria">Seleccione categoria</string>
+    <string name="txt_nombre_categoria">Da nombre a tu cuestionario</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="no_tienes_cuenta">¿No tienes cuenta?</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="hintPas">****</string>
+    <string name="todo">TODO</string>
+    <string name="nameHint">User</string>
+    <string name="elige_avatar">Elige tu avatar</string>
+</resources>

@@ -1,0 +1,18 @@
+
+<div class="container">
+
+    <div class="noticia-frame" [ngClass]="{'dark': style.oscuro }">
+        <div class="noticia">
+
+            <div class="noticia-head">
+                <h2> {{noticia.titulo | uppercase}} </h2>
+                <span> {{noticia.fecha | date }} </span>
+            </div>
+
+            <div class="noticia-body">
+                {{ noticia.texto }}
+            </div>
+
+        </div>
+    </div>
+</div>

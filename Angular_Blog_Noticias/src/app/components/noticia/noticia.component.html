@@ -1,0 +1,13 @@
+
+
+<div class="noticia" [ngClass]="{'dark': style.oscuro }">
+    <div class="nota-cabecera" >
+        <h3>{{ noticia.titulo | uppercase }}</h3>
+        <span>{{ noticia.fecha | date }}</span>
+    </div>
+    <blockquote>{{ noticia.texto }}</blockquote>
+    <div class="nota-botones">
+        <i (click)="eliminar()" class="fas fa-trash-alt eliminar"></i>
+        <i (click)="modificar()"class="fas fa-edit modificar"></i>
+    </div>
+</div>

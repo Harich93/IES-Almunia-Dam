@@ -1,0 +1,13 @@
+        
+<div (click)="detalleArticulo()" class="card" [ngClass]="{ 'lista': lista, 'listaSmall': listaSmall }">
+    <div class="card-img">
+        <img [src]="articulo.img" alt="">
+    </div>
+    <div *ngIf="!articulo.vendido" class="card-header">
+        <h2>{{ articulo.precio | currency:'EUR' }}</h2>
+        <h3> {{ articulo.nombre }} </h3>
+    </div>
+    <div *ngIf="articulo.vendido" class="card-header">
+        <h2>Vendido</h2>
+    </div>
+</div>

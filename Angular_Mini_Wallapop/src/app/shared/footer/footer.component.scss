@@ -1,0 +1,23 @@
+@import '/src//scss/colors.scss';
+
+.footer {
+    align-items: center;
+    background-color: $dark-trans;
+    box-shadow: inset 0px 20px 20px $dark;
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+
+    i{ 
+        color: $dark; 
+        cursor: pointer;
+        font-size: xx-large; 
+        margin: 10px;
+
+        transition: color .7s ease-in;
+        
+        &:hover {
+            color: $primary;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+<app-cabecera 
+    [oculta]="oculta"
+    (onCambioImg)="cambiarImg($event)"
+    (onCambioImgVC)="cambiarImgVC($event)"
+    (onOcultarImg)="ocultarImagen($event)"
+>
+    <img src="https://images.pexels.com/photos/9336680/pexels-photo-9336680.jpeg?cs=srgb&dl=pexels-aleksey-sokolenko-9336680.jpg&fm=jpg" class="animate__animated animate__fadeIn animate__slower" alt="imagenCabecera"/>
+
+</app-cabecera>
+
+<div *ngIf="!oculta" class="img">
+    <img 
+        #imgVC
+        class="animate__animated animate__fadeIn animate__slower"
+        [src]="img" 
+        alt="imagenCabecera"
+    />
+</div>
